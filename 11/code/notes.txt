@@ -1,0 +1,17 @@
+#
+# On static members of classes
+The `this` pointer cannot be used in a static member function, because
+static member functions are not called through any instance of their class.
+Moreover, a static member function acannot access an instance member
+of its class unless it specifies what instance the member belongs to.
+
+An advantage of static member functions is they can be called before any instances of the
+class have been created. This allows them to be used to perform complex initialization
+tasks that have to be done before objects of the class have been created.
+
+
+# Friends of Classes:
+# Concept:
+A friend is a function that is not a member of a class, but has 
+acces to the private members of the class.
+
