@@ -10,8 +10,29 @@ class have been created. This allows them to be used to perform complex initiali
 tasks that have to be done before objects of the class have been created.
 
 
+
+# 
 # Friends of Classes:
 # Concept:
 A friend is a function that is not a member of a class, but has 
 acces to the private members of the class.
+
+
+
+#
+# Memberwise Assignment
+The = operator may be used to assign one object to another, or to initialize
+one object with another object’s data. By default, each member of one
+object is copied to its counterpart in the other object.
+
+
+
+#
+# Copy Constructors
+A copy constructor is a special constructor that is called
+whenever a new object is created and initialized with the data of 
+another object of the same class.
+If the programmer does not specify a copy constructor for the class, then the compiler
+automatically calls a default copy constructor. This default copy constructor simply copies
+the data of the existing object to the new object using memberwise assignment.
 
