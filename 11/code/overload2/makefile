@@ -3,4 +3,4 @@ overload: Length.cpp Length.h main.cpp
 run:
 	./overload.x
 clean:
-	rm ./overload
+	rm ./overload.x
