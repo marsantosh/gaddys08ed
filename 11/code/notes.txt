@@ -36,3 +36,8 @@ If the programmer does not specify a copy constructor for the class, then the co
 automatically calls a default copy constructor. This default copy constructor simply copies
 the data of the existing object to the new object using memberwise assignment.
 
+In general, classes with pointer
+members will not behave correctly under the default copy constructor provided by the
+compiler. They must be provided with a copy constructor written by the programmer.
+
+s
