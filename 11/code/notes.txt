@@ -40,4 +40,20 @@ In general, classes with pointer
 members will not behave correctly under the default copy constructor provided by the
 compiler. They must be provided with a copy constructor written by the programmer.
 
-s
+#
+# Convert Constructors
+In addition to providing a means for the creation of objects, convert Constructors
+provide a way for the compuiler to convert a value of a fiven type
+to an object of the class
+
+Convert Constructors are automatically invoked by the compiler whenever the
+context demands a class object but a value of construtor's parameter type
+is provided. This occurs in four different contexts:
+    1. An object of the class is initialized with a value of the convert
+       constructor's parameter type.
+    2. An object of the class is assigned a value fo the convert contructor's
+       parameter type.
+    3. A function expecting a value parameter of the class type is instead passed
+       a value of the constructor's parameter type.
+    4. A function that declares a return value of the class type actually returns
+       a value of the convert constructor's parameter type.
