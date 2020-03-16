@@ -4,11 +4,9 @@ The `this` pointer cannot be used in a static member function, because
 static member functions are not called through any instance of their class.
 Moreover, a static member function acannot access an instance member
 of its class unless it specifies what instance the member belongs to.
-
 An advantage of static member functions is they can be called before any instances of the
 class have been created. This allows them to be used to perform complex initialization
 tasks that have to be done before objects of the class have been created.
-
 
 
 # 
@@ -18,13 +16,11 @@ A friend is a function that is not a member of a class, but has
 acces to the private members of the class.
 
 
-
 #
 # Memberwise Assignment
 The = operator may be used to assign one object to another, or to initialize
 one object with another object’s data. By default, each member of one
 object is copied to its counterpart in the other object.
-
 
 
 #
@@ -35,17 +31,16 @@ another object of the same class.
 If the programmer does not specify a copy constructor for the class, then the compiler
 automatically calls a default copy constructor. This default copy constructor simply copies
 the data of the existing object to the new object using memberwise assignment.
-
 In general, classes with pointer
 members will not behave correctly under the default copy constructor provided by the
 compiler. They must be provided with a copy constructor written by the programmer.
+
 
 #
 # Convert Constructors
 In addition to providing a means for the creation of objects, convert Constructors
 provide a way for the compuiler to convert a value of a fiven type
-to an object of the class
-
+to an object of the class.
 Convert Constructors are automatically invoked by the compiler whenever the
 context demands a class object but a value of construtor's parameter type
 is provided. This occurs in four different contexts:
@@ -64,3 +59,16 @@ is provided. This occurs in four different contexts:
 Class aggregation occurs when an object of one class owns an object of
 another class. Class composition is a form of aggregation where the owner class
 controls the lfietime of objects of the owned class.
+
+
+# 
+# Inheritance
+When an is-a relationship exists between objects, it means that the specialized object has
+all of the characteristics of the general object, plus additional characteristics that make it
+special. In object-oriented programming, inheritance is used to create an is-a relationship
+between classes.
+Inheritance involves a base class and a derived class. The base class is the general class and
+the derived class is the specialized class. The derived class is based on, or derived from, the
+base class. You can think of the base class as the parent and the derived class as the child.
+
+
