@@ -57,3 +57,10 @@ is provided. This occurs in four different contexts:
        a value of the constructor's parameter type.
     4. A function that declares a return value of the class type actually returns
        a value of the convert constructor's parameter type.
+
+
+#
+# Aggregation and Composition
+Class aggregation occurs when an object of one class owns an object of
+another class. Class composition is a form of aggregation where the owner class
+controls the lfietime of objects of the owned class.
