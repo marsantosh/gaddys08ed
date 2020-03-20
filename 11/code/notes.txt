@@ -72,3 +72,13 @@ the derived class is the specialized class. The derived class is based on, or de
 base class. You can think of the base class as the parent and the derived class as the child.
 
 
+#
+# Protected Members and Class Access
+Protected members of a base class are like private members, except they
+may be accessed by derived classes. The base class access specification
+determines how private, protected, and public base class members are
+accessed when they are inherited by the derived class.
+C++ provides a third access specification, protected . Protected members of a base class
+are like private members, except they may be accessed by member functions of a derived
+class. Protected members are inaccessible to all other code in the program.*
+* Friend functions and friend classes have access to both private and protected members.
