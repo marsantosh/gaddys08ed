@@ -82,3 +82,27 @@ C++ provides a third access specification, protected . Protected members of a ba
 are like private members, except they may be accessed by member functions of a derived
 class. Protected members are inaccessible to all other code in the program.*
 * Friend functions and friend classes have access to both private and protected members.
+
+
+#
+# Base Class Access Specifications
+private:
+   • Private members of the base class are inaccessible to the derived class.
+   • Protected members of the base class become private members of the derived class.
+   • Public members of the base class become private members of the derived class.
+protected:
+   • Private members of the base class are inaccessible to the derived class.
+   • Protected members of the base class become protected members of the derived class.
+   • Public members of the base class become protected members of the derived class.
+public:
+   • Private members of the base class are inaccessible to the derived class.
+   • Protected members of the base class become protected members of the derived class.
+   • Public members of the base class become public members of the derived class.
+
+
+#
+# Constructors, Destructors and Inheritance
+When an object of a derived class is being instantiated, the base class
+constructor is called before the derived class constructor. When the object is
+destroyed, the derived class destructor is called before the base class
+destructor.
