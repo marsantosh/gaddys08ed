@@ -1,0 +1,8 @@
+#                           Notes on Chapter 12
+
+#
+#                               C-String
+A C-string is a sequence of characters stored in consecutive memory
+locations and terminated by a null character.
+The type of a C-string is ` char * ` that is, the type of a C-string is pointer to char.
+
