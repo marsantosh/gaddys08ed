@@ -5,4 +5,16 @@
 A C-string is a sequence of characters stored in consecutive memory
 locations and terminated by a null character.
 The type of a C-string is ` char * ` that is, the type of a C-string is pointer to char.
+C-strings can be represented as string literals or as arrays of characters.
+Both of these methods allocate an array and then use the address of the array as a pointer
+to char to actually represent the string. The difference between the two is that in the first
+case, the array used to store the string is allocated implicitly by the compiler, whereas in the
+second, the array is explicitly allocated by the programmer.
+The third method of representing a C-string uses a pointer to char to point to a C-string
+whose storage has already been allocated by one of the other two methods.
+A major advantage in using a pointer variable to represent a C-string is the ability to make
+the pointer point to different C-strings.
+Another way to use a pointer to a char as a C-string is to define the pointer and then set it
+to point to dynamically allocated storage returned by the new operator.
+
 
