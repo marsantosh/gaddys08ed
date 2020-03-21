@@ -20,6 +20,16 @@ int main() {
     // display the string
     cout << "Hello " << pname;
     cout << endl;
-    
+
     return 0;
 }
+
+/*
+A common mistake when using pointers to char as C-strings is using the pointer when it
+does not point to a properly allocated C-string. For example, the code
+char *pname;
+cout << "Enter your name: ";
+cin >> pname;
+is erroneous because the program tries to read a string into the memory location pointed to
+by pname , when pname has not been properly initialized.
+*/
