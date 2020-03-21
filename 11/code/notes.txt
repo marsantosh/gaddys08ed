@@ -137,3 +137,10 @@ derived class when the base class already has a member function of the same name
 parameter list. Overloading refers to the definition of different functions within the same
 class with the same name and different parameter lists. Overloading can also refer to the
 definition of different functions with different parameter lists at the global level.
+- Gaining Access to an Overridden Member Function
+If a derived class overrides a base class member function, member functions of the derived
+class that would have otherwise called the overridden base class member function will now
+call the version in the derived class. It is occasionally useful to be able to call the
+overridden version. In fact, the new member function of the derived class may want to call
+the base class member function that it is overriding. This is done by using the scope
+resolution operator to specify the class of the overridden member function being accessed.
