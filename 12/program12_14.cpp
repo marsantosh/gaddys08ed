@@ -1,0 +1,15 @@
+// program12_14.cpp
+// this program demonstrates some C++ string class constructors
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    string greeting;
+    string name("William Smith");
+
+    greeting = "Hello ";
+    cout << greeting << name << endl;
+    return 0;
+}
