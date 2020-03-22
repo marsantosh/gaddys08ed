@@ -1,0 +1,7 @@
+
+
+#                            input and output streams
+#
+ifstream objects are used for file input, ofstream objects are used for file
+output, and fstream objects are used for both input and output.
+

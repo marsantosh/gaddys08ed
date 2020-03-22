@@ -1,0 +1,6 @@
+Hi my name is Marco and I am learning C++.
+I think it's a very cool programming language.
+
+Hello from the inout.txt file!Hello
+
+Hello
