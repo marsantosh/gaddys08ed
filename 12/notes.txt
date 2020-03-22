@@ -18,3 +18,12 @@ Another way to use a pointer to a char as a C-string is to define the pointer an
 to point to dynamically allocated storage returned by the new operator.
 
 
+
+
+#
+#                   Using Pointers to Pass C-String Arguments
+Pointers are extremely useful for writing functions that process C-strings. If the starting
+address of a string is passed into a pointer parameter variable, it can be assumed that all
+the characters, from that address up to the byte that holds the null terminator are part of
+the string. (It isn’t necessary to know the length of the array that holds the string.)
+
