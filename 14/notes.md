@@ -29,7 +29,8 @@ functions involved in indirect recursions.
 
 ### __Recursive factorial function__
 The recursive factorial function accepts an argument and calculates its factorial
-Its base case is when the argument is 0.
+Its base case is when the argument is 0.  
+(implemented on `simple_factorial.cpp`)
 
 ## __Recursive gcd function__
 Using Euclid's algorithm, the gcd (greatest common divisor) of two positive
@@ -37,4 +38,13 @@ integers, x, and y, is
 ```
 gcd(x, y) = y                        :: if y divides x with no reminder
           = gcd(y, reminder of x/y)  :: otherwise
-```
+```  
+(implemented on `gcd.cpp`)
+
+## __A recursive binary search function__
+The binary search algorithmcan be defined as a recursive function.  
+(implemented on `recursive_bsearch.cpp`)
+
+## __QuickSort Algorithm__
+The QuickSort algorithm uses recursion to sort lists efficiently.  
+(implemented on `quicksort.cpp`)
