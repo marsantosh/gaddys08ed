@@ -48,3 +48,11 @@ The binary search algorithmcan be defined as a recursive function.
 ## __QuickSort Algorithm__
 The QuickSort algorithm uses recursion to sort lists efficiently.  
 (implemented on `quicksort.cpp`)
+
+
+## Exhaustive and Enumeration Algorithms
+An enunmeration algorithm is one that generates all possible combinations of items
+of a certain type; an exhaustive algorithm is one that searches through such a set of 
+combinations to find the best one.
+
+_Recursive_ thechniques are often useful in exhaustive and enumeration algorithms.
