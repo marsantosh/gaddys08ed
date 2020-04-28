@@ -56,3 +56,13 @@ of a certain type; an exhaustive algorithm is one that searches through such a s
 combinations to find the best one.
 
 _Recursive_ thechniques are often useful in exhaustive and enumeration algorithms.
+
+In general, programs that use _recursion_ incur more overhead than equivalent programs
+that use iteration. This is because recursion typically involves making of several
+function calls. For each such call, the machine must pass parameters to the call, keep
+track of the return address, create the function's local variavles, and finally,
+destroy the local variables when the function returns.
+
+In general, recursion should be used whenever the problem has a natural recursive solution
+that does not unncessarily recompute solutions to subproblems and the equivalent solution
+based on iteration either is not obvious or is difficult.
