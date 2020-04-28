@@ -52,3 +52,55 @@ class D: public B {
 }:
 ```
 
+### Dynamíc and Static Binding
+The compiler is said to _bind_ the name of a function when it selects the code that
+should be executed when the funcion name is invoked.
+_Static binding_ happends at compile time and binds the name to a fixed function
+definition, which is then executed each time the name is invoked. 
+
+In _static binding_ the compiler uses type information available at compile time.
+If the code is operating on objects of different classes within an inheritance hierarchy,
+the only type information available to the compuler will be the base class
+pointer type used to access all the objects. Consequently, _static binding_ will
+always use the base class version of a member function.
+
+
+In contrast, _dynamic binding_ occurs at run time. Dynamic binding works only
+of the compiler can determine at run time the exact class that a sublcass object belongs to.
+The compiler then uses this run-time tpye information to call the version
+of the function defined in that class.
+To make dynamic binding possible, the compiler stores run-time information in
+every object of a class with a virtual function. _Dynamic binding_ always uses the version
+of the member function in the actual class of the object, regardless of the class of the
+pointer used to access the object.
+
+
+## Abstract Base Classes and Pure Virtual Functions
+Abstract classes and pure virtual functions acan be used to define an interface that must
+be implemented by derived classes.
+
+The C++ language permits the programmer to declare the function a pure virtual function, that is, a
+member function for which the class provides no implementation.
+The C++ way of declaring a pure virtual function is to put the expression = 0 in the class
+declaration where the body of the function would otherwise have gone.
+For example, if a member function
+void draw() is being declared pure virtual, then its declaration in its class looks like
+```
+void draw() = ;
+```
+
+A pure virtual function is sometimes called an bastract function, and a class with at least
+one pure virtual function is called an abstract class.
+The C++ compiler will not allow you
+to instantiate an abstract class. Abstract classes can only be subclassed: that is, you can
+only use them as base classes from which to derive other classes.
+A class derived from an abstract class inherits all functions in the base class and will itself
+be an abstract class unless it overrides all the abstract functions it inherits.
+
+ - When a class contains a pure virtual function, it is an abstract base class.
+ - Abstract base classes cannot be instantiated.
+ - Pure virtual functions are declared with the = 0 notation, and have no body, or definition.
+ - Pure virtual functions must be overridden in derived classes that need to be instantiated.
+
+
+## Composition versus Inheritance
