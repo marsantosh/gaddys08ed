@@ -38,3 +38,11 @@ in the try block.
 #### Handling the `bad_alloc` Exception Thrown by `new`
 The new operator throws a system-defined exception of type bad_alloc if it is unable to
 allocate the requested storage.
+
+If the function does not contain a catch block capable of handling the exception, control passes
+out of the function, and the exception is automatically rethrown at the point of the call in the
+calling function. By this process, an exception can propagate backwards along the chain of
+function calls until the exception is thrown out of a try block that has a catch block that can
+handle it. If no such try block is ever found, the exception will eventually be thrown out of the
+main function, causing the program to be terminated. This process of propagating uncaught
+exceptions from a function to its caller is called _unwinding the stack_ of function calls.
