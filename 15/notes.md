@@ -123,3 +123,7 @@ inheritance whenever possible. One reason is that inheritance breaks the encapsu
 of the base class by exposing the base class’s protected members to the methods of the
 derived class.
 
+There is a third relationship between classes that some authors talk about: the _uses_
+_implementation of_ relation. Basically, one class uses the implementation of a second class if
+it calls a member function of an object of the second class.
+
