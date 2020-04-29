@@ -1,5 +1,10 @@
-prog: program16_01.cpp
-	g++ -o prog.x program16_02.cpp
+CC = g++
+CFLAGS = -Wall
+DEPS =
+OBJ = program16_05.cpp
+
+prog.o: $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
 run:
 	./prog.x
 clean:
