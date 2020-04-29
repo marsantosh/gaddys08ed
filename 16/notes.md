@@ -34,3 +34,7 @@ C++ allows you to throw and catch
 multiple exceptions. The only requirement is that each different exception be of a different
 type. You then code a separate catch block for each type of exception that may be thrown
 in the try block.
+
+#### Handling the `bad_alloc` Exception Thrown by `new`
+The new operator throws a system-defined exception of type bad_alloc if it is unable to
+allocate the requested storage.
