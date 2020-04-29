@@ -24,10 +24,10 @@ class IntRange2 {
         int getInput() {
             cin >> input;
             if (input < lower) {
-                throw TooLow();
+                throw ExceptionLow();
             }
             else if (input > upper) {
-                throw TooHigh();
+                throw ExceptionHigh();
             }
             return input;
         }
