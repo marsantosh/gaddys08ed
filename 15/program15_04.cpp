@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+
 class Shape {
     protected:
         int posX, posY;
@@ -59,15 +60,15 @@ int main() {
     return 0;
 }
 
+
 /*
  * 
-The first time the statement is executed, it invokes the draw function on a hexagon object,
-while the second time, it invokes the draw function on a rectangle object. Because the two
-draw functions are in different classes, they produce different behavior.
-Remember the following points about abstract base classes and pure virtual functions:
- • When a class contains a pure virtual function, it is an abstract base class.
- • Abstract base classes cannot be instantiated.
- • Pure virtual functions are declared with the = 0 notation, and have no body, or definition.
- • Pure virtual functions must be overridden in derived classes that need to be instantiated.
-
+    The first time the statement is executed, it invokes the draw function on a hexagon object,
+    while the second time, it invokes the draw function on a rectangle object. Because the two
+    draw functions are in different classes, they produce different behavior.
+    Remember the following points about abstract base classes and pure virtual functions:
+    • When a class contains a pure virtual function, it is an abstract base class.
+    • Abstract base classes cannot be instantiated.
+    • Pure virtual functions are declared with the = 0 notation, and have no body, or definition.
+    • Pure virtual functions must be overridden in derived classes that need to be instantiated.
  */

@@ -3,6 +3,7 @@ It often makes sense to create a new class based on an
 existing class if the new class is a special version of the existing one. The derived class can
 then itself serve as the base class for other classes, resulting in an inheritance hierarchy.
 
+
 ### Type Compatibility in Inheritance
 Certain type compatibility relationships hold among different classes in an inheritance
 hierarchy. Because objects in an inheritance hierarchy are commonly accessed through pointers,
@@ -10,7 +11,7 @@ we state these rules in terms of pointers.
 
  - A _derived class pointer can always be assigned to a base class pointer._ This means
    that base class pointers can point to derived class objects.
- - a _type cast is required to perform the opposite assignment of a base class pointer_
+ - A _type cast is required to perform the opposite assignment of a base class pointer_
    _to a derived class pointer_. An error may result at run time if the base class pointer
    does not actually point to a derived class object.
 
@@ -32,8 +33,9 @@ class B {
         virtual void mfun() {
             cout << "Base class version";
         }
-}:
+}
 ```
+
 The virtual characteristic is inherited: that is, if a member function of a derived class
 overrides a virtual function in the base class, then that member function is automatically
 virtual itself. Thus the declaration of mfun as virtual in B makes mfun virtual in D and in all
@@ -51,6 +53,7 @@ class D: public B {
         }
 }:
 ```
+
 
 ### Dynamíc and Static Binding
 The compiler is said to _bind_ the name of a function when it selects the code that
@@ -85,6 +88,7 @@ The C++ way of declaring a pure virtual function is to put the expression = 0 in
 declaration where the body of the function would otherwise have gone.
 For example, if a member function
 void draw() is being declared pure virtual, then its declaration in its class looks like
+
 ```
 void draw() = ;
 ```
@@ -104,3 +108,18 @@ be an abstract class unless it overrides all the abstract functions it inherits.
 
 
 ## Composition versus Inheritance
+Inheritance should model an "is-a" relation, rather than a "has-a" relation,
+between the derived and base classes.
+
+_Class inheritance_ in an object-oriented language should be used to model the fact that the
+type of the derived class is a special case of the type of the base class. Actually, a class can
+be considered to be the set of all objects that can be created from it.
+
+_Class composition_ occurs whenever a class contains an object of another class as one
+of its member variables. _Composition_ can be viewed as a _has a_ relation between classes.
+
+It is a good design practice to prefer composition to
+inheritance whenever possible. One reason is that inheritance breaks the encapsulation
+of the base class by exposing the base class’s protected members to the methods of the
+derived class.
+
