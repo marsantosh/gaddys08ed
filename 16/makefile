@@ -1,11 +1,11 @@
 CC = g++
 CFLAGS = -Wall
 DEPS =
-OBJ = program16_05.cpp
+OBJ = program16_06.cpp
 
 prog.o: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 run:
-	./prog.x
+	./prog.o
 clean:
-	rm prog.x
+	rm prog.o
