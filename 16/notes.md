@@ -46,3 +46,53 @@ function calls until the exception is thrown out of a try block that has a catch
 handle it. If no such try block is ever found, the exception will eventually be thrown out of the
 main function, causing the program to be terminated. This process of propagating uncaught
 exceptions from a function to its caller is called _unwinding the stack_ of function calls.
+
+## Function Templates
+A function template is a “generic” function that can work with different
+data types. The programmer writes the specifications of the function, but
+substitutes parameters for data types. When the compiler encounters a call
+to the function, it generates code to handle the specific data type(s) used in
+the call.
+
+```c++
+int square(int number) {
+    return number * number
+}
+double square(double number) {
+    return number * number;
+}
+```
+The only differences between these two functions are the data types of their return values
+and their parameters. In situations like this, it is more convenient to write a function
+template than an overloaded function. Function templates allow you to write a single
+function definition that works with many different data types, instead of having to write
+a separate function for each data type used.
+
+A function template is not an actual function, but a "mold" the compiler
+uses to generate one or more functions. When writing a function template,
+you do not have to specify actual types for the parameters, return value
+or local variables. Instead, you use a _type parameter_ to specify
+a generic data type. When the compiler enconunters a call to the function, 
+it examines the data types of its arguments and generates the function
+code that will work with those data types.
+
+```c++
+template <class T>
+T square(T number) {
+    return number * number
+} 
+```
+
+The beginning of a function template is marked by a template prefix, which begins
+with the key word template . Next is a set of angled brackets that contains one or
+more generic data types used in the template. A generic data type starts with the key
+word class , followed by a parameter name that stands for the data type. The example
+just given only uses one, which is named T . (If there were more, they would be
+separated by commas.) After this, the function definition is written as usual, except the
+type parameters are substituted for the actual data type names.
+
+NOTE:
+A function template is merely the specification of a function and by itself does
+not cause memory to be used. An actual instance of the function is created in memory
+when the compiler encounters a call to the template function.
+
