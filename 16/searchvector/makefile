@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
-DEPS =
-OBJ = program16_10.cpp
+DEPS = SearchVect.h
+OBJ = program16_12.cpp
 
 prog.o: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
