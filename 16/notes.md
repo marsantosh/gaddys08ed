@@ -96,3 +96,58 @@ A function template is merely the specification of a function and by itself does
 not cause memory to be used. An actual instance of the function is created in memory
 when the compiler encounters a call to the template function.
 
+## Class Templates
+Templates may also be used to create generic classes and abstract data types.
+Function templates are used whenever we need several different functions with the same
+problem-solving logic, but which differ only in the types of the parameters they work
+with. Class templates can be used whenever we need several classes that only differ in the
+types of some of their data members, or in the types of the parameters of their member
+functions.
+
+Declaring a class template is similar to declaring a function template: you write the class
+using identifiers such as T , T1 , T2 (or whatever other identifier you choose) as generic types,
+and then prefix the class declaration with an appropriately written template header.
+
+```c++
+template <class T>
+class SimpleVector {
+    private:
+        T *aptr;
+        int arraySize;
+        void subError() const;
+    public:
+        SimpleVector() { aptr = 0; arraySize = 0; }
+        SimpleVector(int);
+        SimpleVector(const SimpleVector &);
+        ~SimpleVector();
+        int size() const { return arraySize; }
+        T &operator[](int);
+        void print() const;
+};
+```
+
+This class template will store elements of type T in a dynamically generated array. This
+explains why the pointer aptr , which will point to the base of this array, is declared to
+be of type T*, a pointer to T . Likewise, the overloaded array subscription operator returns
+a value of type T . Notice, however, that the size member function and the member
+arraySize that represents the number of elements stored in the array are both of type
+int . This makes sense because the number of elements in an array is always an integer,
+regardless of the type of element the array stores.
+
+You can think of the SimpleVector template as a generic pattern that can be specialized to
+create classes of SimpleVector that hold double , long , string , or any other type that
+you can define. The rule is that you form the name of such an actual class by appending a
+list of the actual types, enclosed in angled brackets, to the name of the class template:
+ - SimpleVector<double> is the name of a class that stores arrays of double .
+ - SimpleVector<string> is the name of a class that stores arrays of string .
+ - SimpleVector<char> is the name of a class that stores arrays of char .
+
+ Defining a member function of a template class inside the class is straightforward: an
+example is furnished by the definition of the default constructor in the SimpleVector
+class. To define a member function outside the class, you must prefix the definition of the
+member function with a template header that specifies the list of type parameters, and then
+within the definition, use the name of the class template followed by a list of the type
+parameters in angled brackets whenever you need the name of the class.
+
+### Class Tempaltes and Inheritacne
+Inheritance can be applied to class templates.
