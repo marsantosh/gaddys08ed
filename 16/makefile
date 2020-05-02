@@ -1,11 +1,11 @@
 CC = g++
 CFLAGS = -Wall
 DEPS =
-OBJ = program16_10.cpp
+OBJ = word_transformation.cpp
 
-prog.o: $(OBJ)
+prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 run:
-	./prog.o
+	./prog.out
 clean:
-	rm prog.o
+	rm prog.out
