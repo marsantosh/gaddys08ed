@@ -151,3 +151,81 @@ parameters in angled brackets whenever you need the name of the class.
 
 ### Class Tempaltes and Inheritacne
 Inheritance can be applied to class templates.
+
+## Standard Template Library
+In addition to its run-time library, which you have used throughout this book, C++ also
+provides a library of templates. The Standard Template Library (or STL) contains
+numerous templates for implementing data types and algorithms.
+The most important data structures in the STL are the containers and iterators. A
+container is a class that stores data and organizes it in some fashion. An iterator is an
+object that works like a pointer and allows access to items stored in containers.
+
+There are two types of container classes in the STL: sequential containers and associative
+containers.
+
+### Sequential containers
+Sequential containers store items in the form of sequences, meaning that there
+is a natural way to order the items by their position within the container. An array is an
+example of a sequential container:
+ - `vector`: A sequence of items implemented as an array that can automatically
+    grow as needed during program execution. Items can be efficiently
+    added and removed from the vect at its end. Insertions and removals from
+    the middle or beginning of the vector are not as efficient-
+ - `deque`: a sequence of items that has a front and back: items can be
+    efficiently added or removed from the front and back. Insertions and
+    removals in the middle of a deque are not as efficient.
+ - `list`: A sequence of items that allows quick additions and removals
+    from any position.
+
+Because a sequential container organizes the items it stores as a sequence, it can be said
+to have a front and a back. A container is said to provide random access to its contents
+if it is possible to specify a position of an item within the container and then jump
+directly to that item without first having to go through all the items that precede it in
+the container.
+Positions used in random access are usually specified by giving an integer specifying the
+position of the desired item within the container. The integer may specify a position
+relative to the beginning of the container, the end of the container, or relative to some
+other position. Arrays and vectors are examples of sequential containers that provide
+random access.
+
+### Associative Containers
+Sequential containers use the position of an item within the sequence to access their data.
+In contrast, associative containers associate a key with each item stored, and then use the
+key to retrieve the stored item. A telephone book is an example of an associative container;
+the values stored are telephone numbers, and each telephone number is associated with a
+name:
+ - `set`: Stores a set of keys. No duplicate values are allowed.
+ - `multiset`: Stores a set of keys. Duplciates are allowed.
+ - `map`: Maps a set of keys to data elements. Each key is associated
+    with a unique data element, and duplciate jeys are not permitted.
+ - `multimap`: Maps a set of keys to data elements. The samt key may be
+    associated with multiple values.
+
+A map is a container that requires each value stored to be associated with a key. Each key
+may be associated with only one value; once a key is used, no other value with the same
+key may be added to the map. A multimap is like a map, except a key may be associated
+with multiple values.
+A set is like a map in which only keys are stored, with no associated values. No item may
+be stored twice in a set: that is, duplicates are not permitted. A multi set is like a set in
+which duplicates are permitted.
+
+### Iterators
+Iterators are objects that behave like pointers. They are used to access items stored in
+containers. A typical iterator is an object of a class declared inside a container class. The
+iterator overloads pointer operators such as the increment operator `++` , the decrement
+operator `--` , and the dereferencing operator * in order to provide pointer-like behavior.
+Each STL container object provides member functions `begin()` and `end()` that return the
+beginning and ending iterators for the object. The `begin()` iterator points to the item at the
+beginning of the container if the container is nonempty, while the `end()` iterator points to
+just past the end of the container.
+
+ - __Forward__: Can only move forward ina  container (uses the `++` operator).
+ - __Bidirectional__: Can move forward or backward in a container 
+    (uses the `++` and `--` operators).
+ - __Random-Access__: Can move forward and backward, and can jump to a 
+    specific data elemtn in a container.
+ - Input: Can be used with `cin` to read information from an input devide
+    or file
+ - Output: Can be used with `cout` to write information to an output
+    decide or a file.
+
