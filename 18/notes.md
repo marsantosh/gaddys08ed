@@ -37,3 +37,34 @@ implemented as a `vector`, a `list`, or a `deque`.
 
 (In computer science, a double-ended queue (abbreviated to `deque`, pronounced deck) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail).
 
+## Queues
+A queue is a data structure that stores and retrieves items in a first-in-first-out
+manner.
+Like a stack, a queue (pronounced “cue”) is a data structure that holds a sequence of
+elements. A queue, however, provides access to its elements in first-in, first-out (FIFO) order.
+
+### Application of Queues
+Queue data structures are commonly used in computer operating systems. They are
+especially important in multiuser/multitasking environments where several users or
+tasks may be requesting the same resource simultaneously. Printing, for example, is
+controlled by a queue because only one document may be printed at a time. A queue is
+used to hold print jobs submitted by users of the system, while the printer services those
+jobs one at a time.
+Communications software also uses queues to hold information received over networks
+and dial-up connections. Sometimes information is transmitted to a system faster than it
+can be processed, so it is placed in a queue when it is received.
+
+### Static and Dynamic Queues
+Queues, like stacks, can be implemented as arrays or linked lists. Dynamic queues offer the
+same advantages over static queues that dynamic stacks offer over static stacks. In fact, the
+primary difference between queues and stacks is the way data elements are accessed in each
+structure.
+
+### Queue Operations
+A queue has a front and a rear like a checkout line in a grocery store.
+When an element is added to a queue, it is added to the rear. When an
+element is removed from a queue, it is removed from the front. The two primary queue
+operations are enqueuing and dequeuing. To __enqueue__ means to insert an element at the
+rear of a queue, and to __dequeue__ means to remove an element from the front of a queue.
+There are several algorithms for implementing these operations.
+

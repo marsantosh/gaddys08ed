@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
-DEPS = 
-OBJ = program18_04.cpp
+DEPS = IntQueue.h
+OBJ = program18_05.cpp IntQueue.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
