@@ -45,3 +45,19 @@ some processing at each node is called traversing the list.
 The basic linked list operations are adding an element to a list, removing an
 element from the list, traversing the list, and destroying the list.
 
+
+There are many ways to link dynamically allocated data structures together.
+Two variations of the linked list are the doubly linked list and the circular
+linked list.
+
+The linked list examples that we have discussed are singly linked lists: Each node is linked to a
+single other node. A variation of this is the doubly linked list. In this type of list, each node not
+only points to the next node, but also to the previous one.
+
+Another variation is the circular linked list. The last node in this type of list points to the first.
+
+The list container, found in the Standard Template Library, is a template version of a
+doubly linked list. STL list s can insert elements or add elements within the list more
+quickly than vectors can, because lists do not have to shift the other elements. Lists are also
+efficient at adding elements at their back because they have a built-in pointer to the last
+element in the list (no traversal required).
