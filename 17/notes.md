@@ -42,3 +42,6 @@ representing the entire list.
 The process of beginning at the head of a list and going through the entire list while doing
 some processing at each node is called traversing the list.
 
+The basic linked list operations are adding an element to a list, removing an
+element from the list, traversing the list, and destroying the list.
+
