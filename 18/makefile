@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
-DEPS = DynIntStack.h
-OBJ = program18_03.cpp DynIntStack.cpp
+DEPS = 
+OBJ = program18_04.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^

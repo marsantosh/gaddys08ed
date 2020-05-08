@@ -29,3 +29,11 @@ for pop to return.
 ## Dyanmic Stacks
 A stack may be implemented as a linked list and expand or shrink with each
 push or pop operation.
+
+## STL `stack` container
+The Standard Template Library offers a stack template that may be
+implemented as a `vector`, a `list`, or a `deque`.
+
+
+(In computer science, a double-ended queue (abbreviated to `deque`, pronounced deck) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail).
+
