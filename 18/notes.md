@@ -25,3 +25,7 @@ impossible to perform the task the code was designed to do. In the case of a sta
 an __overflow__ exception occurs during a call to push if there is no more room on the stack.
 Likewise, an __underflow__ exception occurs in a call to pop if there is nothing on the stack
 for pop to return.
+
+## Dyanmic Stacks
+A stack may be implemented as a linked list and expand or shrink with each
+push or pop operation.
