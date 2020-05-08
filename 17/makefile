@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
-DEPS = NumberList.h
-OBJ = program17_03.cpp NumberList.cpp
+DEPS = 
+OBJ = program17_09.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
