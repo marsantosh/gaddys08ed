@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 DEPS = DynIntQueue.h
-OBJ = program18_06.cpp DynIntQueue.cpp
+OBJ = program18_07.cpp DynIntQueue.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
