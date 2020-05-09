@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 DEPS =
-OBJ = non_recursive_quicksort.cpp
+OBJ = postfix_to_infix_exp.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
