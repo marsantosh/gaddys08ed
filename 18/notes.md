@@ -68,3 +68,12 @@ operations are enqueuing and dequeuing. To __enqueue__ means to insert an elemen
 rear of a queue, and to __dequeue__ means to remove an element from the front of a queue.
 There are several algorithms for implementing these operations.
 
+### Dynamic Queues
+A queue may be implemented as a linked list and expand or shrink with each
+enqueue or dequeue operation.
+Dynamic queues, which are built around linked lists, are much more intuitive to understand
+than static queues. A dynamic queue starts as an empty linked list. With the first enqueue
+operation, a node is added, which is pointed to by the front and rear pointers. As each new
+item is added to the queue, a new node is added to the rear of the list, and the rear pointer is
+updated to point to the new node. As each item is dequeued, front is made to point to the
+next node in the list, and then the node that was previously at the front of the list is deleted.
