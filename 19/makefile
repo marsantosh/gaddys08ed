@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 DEPS = IntBinaryTree.h
-OBJ = program19_02.cpp IntBinaryTree.cpp
+OBJ = program19_03.cpp IntBinaryTree.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
