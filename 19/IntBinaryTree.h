@@ -29,6 +29,8 @@ class IntBinaryTree {
         void displayPostOrder(TreeNode *) const;
         int leafCount(TreeNode *) const;
         int size(TreeNode *) const;
+        int width(TreeNode *) const;
+        int height(TreeNode *) const;
     
     public:
         //  these member functions are the public interface
@@ -36,31 +38,44 @@ class IntBinaryTree {
         IntBinaryTree() {
             root = NULL;
         }
+        
         // destructor
         ~IntBinaryTree() {
             destroySubtree(root);
         }
+
         void insert(int num) {
             insert(root, num);
         }
+
         bool search(int) const;
+
         void remove(int num) {
             remove(root, num);
         }
+
         void showInOrder() const {
             displayInOrder(root);
         }
+
         void showPreOrder() const {
             displayPreOrder(root);
         }
+
         void showPostOrder() const {
             displayPostOrder(root);
         }
+
         int getLeafCount() const {
             return leafCount(root);
         }
+
         int getSize() const {
             return size(root);
+        }
+
+        int getHeight() const {
+            return height(root);
         }
 };
 #endif

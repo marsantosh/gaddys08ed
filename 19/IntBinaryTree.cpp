@@ -152,3 +152,16 @@ int IntBinaryTree::size(TreeNode *tree) const {
 }
 
 
+int IntBinaryTree::height(TreeNode *tree) const {
+    if (tree == NULL)
+        return 0;
+    else {
+        int lHeight = height(tree->left);
+        int rHeight = height(tree->right);
+
+        if (lHeight > rHeight)
+            return lHeight + 1;
+        else
+            return rHeight + 1;
+    }
+}
