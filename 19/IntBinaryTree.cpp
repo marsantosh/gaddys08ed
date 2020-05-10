@@ -165,3 +165,29 @@ int IntBinaryTree::height(TreeNode *tree) const {
             return rHeight + 1;
     }
 }
+
+
+int IntBinaryTree::width(TreeNode *tree, int level) const {
+    if (tree == NULL)
+        return 0;
+    if (level == 1)
+        return 1;
+    else
+        return width(tree->left, level - 1) + width(tree->right, level - 1);
+}
+
+
+int IntBinaryTree::max_width(TreeNode *tree) const {
+    int maxWidth = 0;
+    int width_var;
+    int h = height(tree);
+
+    // get with of each level adn compare the
+    // width with the maximum width do far
+    for (int i = 1; i <= h; i++) {
+        width_var = width(tree, i);
+        if (width_var > maxWidth)
+            maxWidth = width_var;
+    }
+    return maxWidth;
+}

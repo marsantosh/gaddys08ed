@@ -29,7 +29,8 @@ class IntBinaryTree {
         void displayPostOrder(TreeNode *) const;
         int leafCount(TreeNode *) const;
         int size(TreeNode *) const;
-        int width(TreeNode *) const;
+        int width(TreeNode *, int) const;
+        int max_width(TreeNode *) const;
         int height(TreeNode *) const;
     
     public:
@@ -38,7 +39,7 @@ class IntBinaryTree {
         IntBinaryTree() {
             root = NULL;
         }
-        
+
         // destructor
         ~IntBinaryTree() {
             destroySubtree(root);
@@ -77,5 +78,9 @@ class IntBinaryTree {
         int getHeight() const {
             return height(root);
         }
+
+        int getWidth() const {
+            return max_width(root);
+        };
 };
 #endif
