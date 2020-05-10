@@ -28,6 +28,7 @@ class IntBinaryTree {
         void displayPreOrder(TreeNode *) const;
         void displayPostOrder(TreeNode *) const;
         int leafCount(TreeNode *) const;
+        int size(TreeNode *) const;
     
     public:
         //  these member functions are the public interface
@@ -57,6 +58,9 @@ class IntBinaryTree {
         }
         int getLeafCount() const {
             return leafCount(root);
+        }
+        int getSize() const {
+            return size(root);
         }
 };
 #endif

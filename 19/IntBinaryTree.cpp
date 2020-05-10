@@ -142,3 +142,13 @@ int IntBinaryTree::leafCount(TreeNode *tree) const {
     else
         return leafCount(tree->left) + leafCount(tree->right);
 }
+
+
+int IntBinaryTree::size(TreeNode *tree) const {
+    if (tree == NULL)
+        return 0;
+    else
+        return size(tree->left) + 1 + size(tree->right);
+}
+
+

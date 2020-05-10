@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 DEPS = 
-OBJ = test_getLeafCount.cpp IntBinaryTree.cpp
+OBJ = test_getSize.cpp IntBinaryTree.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
