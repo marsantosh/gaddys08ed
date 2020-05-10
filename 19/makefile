@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall
 DEPS = 
-OBJ = genealogy_tree.cpp
+OBJ = test_getLeafCount.cpp IntBinaryTree.cpp
 
 prog.out: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^

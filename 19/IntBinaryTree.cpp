@@ -133,3 +133,12 @@ void IntBinaryTree::displayPostOrder(TreeNode *tree) const {
     }
 }
 
+
+int IntBinaryTree::leafCount(TreeNode *tree) const {
+    if (tree == NULL)
+        return 0;
+    if (tree->left == NULL && tree->right == NULL)
+        return 1;
+    else
+        return leafCount(tree->left) + leafCount(tree->right);
+}
