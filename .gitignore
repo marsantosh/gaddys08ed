@@ -1,6 +1,9 @@
 # mac related files
 .DS_Store
 
+# vscode related
+.vscode
+
 # Prerequisites
 *.d
 
